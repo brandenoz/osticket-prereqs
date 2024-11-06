@@ -23,7 +23,21 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Item 4
 - Item 5
 
-<img src="https://i.imgur.com/LZuIPfI.png" title="Screenshot of CMD" alt="Screenshot of command prompt"/>
+<img src="https://imgur.com/a/3ZlgbbE" alt="Screenshot 127.0.0.4 aka Web Server page in browswer"/>
+<img src="https://imgur.com/a/CE6HO8N" alt="asdfasdfasdf"/>
+<img src="https://imgur.com/a/S8nxsk8" alt="asdfasdfasdf"/>
+<img src="https://imgur.com/a/aJAYGIZ" alt="asdfasdfasdf"/>
+<img src="https://imgur.com/t5tjJli" alt="asdfasdfasdf"/>
+
+
+
+
+
+
+
+
+
+
 
 <h2>Installation Steps</h2>
 
