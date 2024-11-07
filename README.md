@@ -22,6 +22,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://imgur.com/a/aJAYGIZ" alt="asdfasdfasdf"/>
 <img src="https://imgur.com/t5tjJli" alt="asdfasdfasdf"/>
 
+![image](https://github.com/user-attachments/assets/995d5a50-c701-422f-93f8-41bbc80140b4)
+
+
 <h2>Installation Steps</h2>
 
 <p>
