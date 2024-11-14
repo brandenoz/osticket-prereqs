@@ -14,7 +14,7 @@ This ticketing system is a widely used and trusted open-source support ticketing
 
 <h3>Step 1: Make a VM</h3>
 
-You can use a VM from my previous project on Building a Virtual Machine, or you can create one now. It is recommended that you choose Windows 10 for the image and 4 VCPUs for the size. You won’t want the VM to be slow. Remember, you will want a resource group made first to keep everything tidy. Set the username and password for the administrator account as something you will remember. Also, make sure to click the box under licensing on the first page of the virtual machine creation. 
+You can use a VM from my previous project on Building a Virtual Machine, or you can create one now: https://github.com/brandenoz/virtual-machine. It is recommended that you choose Windows 10 for the image and 4 VCPUs for the size. You won’t want the VM to be slow. Remember, you will want a resource group made first to keep everything tidy. Set the username and password for the administrator account as something you will remember. Also, make sure to click the box under licensing on the first page of the virtual machine creation. 
 
 <h3>Step 2: Download Files</h3>
 
