@@ -44,7 +44,7 @@ Under Programs, click Uninstall a program. <br>
 ![3](https://github.com/user-attachments/assets/c9d88641-76d7-4082-95ff-a5614c49ebe0)
 
 
-Step 4: Install Files
+<h3>Step 4: Install Files</h3>
 
 We will be using the desktop folder we made. This is a list of resources needed for the installation per osTicket compiled by Josh Madakor. 
 - Install PHPManagerforIIS_V1.5.0 by doubleclicking the file from our desktop folder on our desktop. Click: Next > I Agree > Next > Close. 
@@ -54,56 +54,57 @@ Extract php-7.3.8-nts-Win32-VC15-x86 into the PHP folder on the C drive by right
 
 ![4](https://github.com/user-attachments/assets/d96285cc-a990-40b3-a4b2-47671050e7ec)
 
-Install VC_redist.x86 by doubleclicking it then clicking I agree > Install > Close. 
-Install mysql-5.5.62-win32 by doubleclicking it then clicking Next > I accept > Next > Typical > Install > Click Launch the Wizard > Finish > Next > Standard Configuration > Next > Next > make username/password “root” to keep it simple. > Next > Execute > Finish. 
-In the Windows start menu, search “ISS” to see Internet Information Services (IIS) Manager. Right-click and open as administrator. In this next step we will be making the computer aware of PHP being on it. <br>
+- Install VC_redist.x86 by doubleclicking it then clicking I agree > Install > Close. 
+- Install mysql-5.5.62-win32 by doubleclicking it then clicking Next > I accept > Next > Typical > Install > Click Launch the Wizard > Finish > Next > Standard Configuration > Next > Next > make username/password “root” to keep it simple. > Next > Execute > Finish. 
+- In the Windows start menu, search “ISS” to see Internet Information Services (IIS) Manager. Right-click and open as administrator. In this next step we will be making the computer aware of PHP being on it. <br>
 
 ![5](https://github.com/user-attachments/assets/881b5399-9692-4550-a89c-a4bada3cb5b3)
 
-Doubleclick PHP Manager. Click Register new PHP version. Browse to php-cgi.exe from the C drive, PHP. Click OK. 
-Now reload ISS. To do this, stop by right clicking and selecting stop. Then after a second or so, right click and click start again. This is what we will do when we reload ISS. 
-Install osTicket-v1.15.8 by right clicking and extracting with default suggestion. When done, you will see this file extracted, doubleclick to open. 
-Copy the folder named “upload”. Paste the file into Windows (C:) > inetpub > wwwroot. Rename the file from Uplaod to osTicket. 
-<br>
-
-Now reload IIS. To do this, stop by right clicking and selecting stop. Then after a second or so, right click and click start again. 
-Now in IIS, click on osTicket under Default Web Site under Sites. Then click Browse to open the osTicket site in a browser window. <br>
+- Doubleclick PHP Manager. Click Register new PHP version. Browse to php-cgi.exe from the C drive, PHP. Click OK. 
+- Now reload ISS. To do this, stop by right clicking and selecting stop. Then after a second or so, right click and click start again. This is what we will do when we reload ISS. 
+- Install osTicket-v1.15.8 by right clicking and extracting with default suggestion. When done, you will see this file extracted, doubleclick to open. 
+- Copy the folder named “upload”. Paste the file into Windows (C:) > inetpub > wwwroot. Rename the file from Uplaod to osTicket. 
+- Now reload IIS. To do this, stop by right clicking and selecting stop. Then after a second or so, right click and click start again. 
+- Now in IIS, click on osTicket under Default Web Site under Sites. Then click Browse to open the osTicket site in a browser window. <br>
 
 ![7](https://github.com/user-attachments/assets/ce8504fb-902f-40fc-a91d-a20b76dcd89b)<br>
 
 ![8](https://github.com/user-attachments/assets/e493abd9-438f-417c-91d7-21fe6b344db7)
-In IIS, doubleclick PHP manager, click Enable or Disable an extension. Then enable the following three extensions if not already done: 1) php_imap.dll, 2) php_intl.dll, 3) php_opcache.dll. Refresh your osTicket Installer page that opened previously in your web browser and observe that most of the recommendations cleared. <br> 
+- In IIS, doubleclick PHP manager, click Enable or Disable an extension. Then enable the following three extensions if not already done: 1) php_imap.dll, 2) php_intl.dll, 3) php_opcache.dll. Refresh your osTicket Installer page that opened previously in your web browser and observe that most of the recommendations cleared. <br> 
 
 ![9](https://github.com/user-attachments/assets/7a282aa2-70fb-4dad-b8e2-10434b7815b2)
 
-Step 5: Configure Web Installation
+<h3>Step 5: Configure Web Installation</h3>
+
 In inetpub > wwwroot > osTicket > include, find the file named ost-sampleconfig.php and rename to ost-config.php. <br>
 
 ![10](https://github.com/user-attachments/assets/9272f599-ceeb-4b9b-80b4-8dd9ed9ad25e)
 
-Open properties of this renamed file. Got to Security > Advanced > Disable Inheritance > Remove all inherited permissions from this object > Add > Select a principal > “Everyone” > Check Names > OK > Full Control > OK > Apply > OK > OK. <br>
+- Open properties of this renamed file. Got to Security > Advanced > Disable Inheritance > Remove all inherited permissions from this object > Add > Select a principal > “Everyone” > Check Names > OK > Full Control > OK > Apply > OK > OK. <br>
 
 ![11](https://github.com/user-attachments/assets/d428bbfb-f1d3-48db-9686-9a174c43ec61)
 
-Now click Continue on the osTicket website that loaded previously into a browser window for us. 
-Name your help desk. Enter a default email and email address for the Admin User that is different. Use adminuser as the Username and Password1 as the password to keep it simple. You can change this later or choose something more secure now as long as you remember it later on when you need it. <br>
+- Now click Continue on the osTicket website that loaded previously into a browser window for us. 
+- Name your help desk. Enter a default email and email address for the Admin User that is different. Use adminuser as the Username and Password1 as the password to keep it simple. You can change this later or choose something more secure now as long as you remember it later on when you need it. <br>
 
 ![12](https://github.com/user-attachments/assets/f0bb9a1c-97c6-4aa8-b34e-436a54705203)
 
-Go into our desktop file folder: osTicket-Installation-Files, install HeidiSQL_12.3.0.6589_Setup by doubleclicking > I accept > Next > Next > Next > Install > Ensure Launch HeidiSQL is checked > Finish. Open HeidiSQL. 
-In HeidiSQL > click New > add root as the User and Password > OK. Right-click Unamed > Create New > Database > osTicket > OK. <br>
+- Go into our desktop file folder: osTicket-Installation-Files, install HeidiSQL_12.3.0.6589_Setup by doubleclicking > I accept > Next > Next > Next > Install > Ensure Launch HeidiSQL is checked > Finish. Open HeidiSQL. 
+- In HeidiSQL > click New > add root as the User and Password > OK. Right-click Unamed > Create New > Database > osTicket > OK. <br>
 
 ![13](https://github.com/user-attachments/assets/188c129c-3dcd-4a96-ac5a-1b173f8bb954)
 
-Now in the osTicket browser page, set the MySQL Database as osTicket, set the MySQL username and password as root, click Install Now. You will see a congratulations page when this is completed. In HeidiSQL you will see files in the new database that we created. 
-Step 6: Bookmark URLs
-This is the fun part. Open these URLs in your web browser and bookmark them for easy navigation later. Login with your user account. 
-http://localhost/osticket/scp/login.php (bookmark) 
-Login with admin user credentials made earlier. <br>
+- Now in the osTicket browser page, set the MySQL Database as osTicket, set the MySQL username and password as root, click Install Now. You will see a congratulations page when this is completed. In HeidiSQL you will see files in the new database that we created. 
+
+<h3>Step 6: Bookmark URLs</h3>
+
+- This is the fun part. Open these URLs in your web browser and bookmark them for easy navigation later. Login with your user account. 
+- http://localhost/osticket/scp/login.php (bookmark) 
+- Login with admin user credentials made earlier. <br>
 
 ![14](https://github.com/user-attachments/assets/71c1990e-b608-400b-a327-0a9d6944a6f3)
 
-http://localhost/osTicket/ (bookmark) <br>
+- http://localhost/osTicket/ (bookmark) <br>
 
 ![15](https://github.com/user-attachments/assets/1b90a86f-6482-4a59-a653-7cdeb00bc0a6)
 
